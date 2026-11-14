@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -8,13 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'git@github.com:tanahmeeedsx/incident-management-2.git'
-            }
-        }
-
         stage('Backend Validation') {
             steps {
                 dir('backend') {
@@ -57,4 +49,3 @@ pipeline {
         }
     }
 }
-
